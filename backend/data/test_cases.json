@@ -1,0 +1,152 @@
+{
+  "application": "Swag Labs",
+  "url": "https://www.saucedemo.com/",
+  "test_environment": {
+    "browser": "Chrome",
+    "os": "Windows 11"
+  },
+  "credentials": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "test_cases": [
+    {
+      "id": "TC-001",
+      "title": "Application Launch & Title Verification",
+      "objective": "Verify that the SauceDemo application loads successfully and displays the correct browser title.",
+      "priority": "High",
+      "type": "Functional",
+      "preconditions": [
+        "Browser open",
+        "Internet connection active",
+        "URL accessible"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Open browser and navigate to https://www.saucedemo.com/",
+          "expected_result": "Page loads; login screen is displayed."
+        },
+        {
+          "step": 2,
+          "action": "Check the browser tab title.",
+          "expected_result": "Tab title reads 'Swag Labs'."
+        }
+      ]
+    },
+    {
+      "id": "TC-002",
+      "title": "User Login - URL Redirect",
+      "objective": "Verify that a valid user can log in and is redirected to the inventory page.",
+      "priority": "Critical",
+      "type": "Functional",
+      "preconditions": [
+        "Application accessible",
+        "Username: standard_user",
+        "Password: secret_sauce"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Navigate to https://www.saucedemo.com/",
+          "expected_result": "Login page is displayed."
+        },
+        {
+          "step": 2,
+          "action": "Enter username: standard_user",
+          "expected_result": "Username populated in the field."
+        },
+        {
+          "step": 3,
+          "action": "Enter password: secret_sauce",
+          "expected_result": "Password masked with dots."
+        },
+        {
+          "step": 4,
+          "action": "Click the LOGIN button.",
+          "expected_result": "User is authenticated and redirected."
+        },
+        {
+          "step": 5,
+          "action": "Observe the browser URL.",
+          "expected_result": "URL contains '/inventory'."
+        }
+      ]
+    },
+    {
+      "id": "TC-003",
+      "title": "Post-Login Page Heading Verification",
+      "objective": "Verify that the inventory page displays the correct heading 'Products' after login.",
+      "priority": "High",
+      "type": "Functional",
+      "preconditions": [
+        "User is logged in",
+        "Inventory page is open"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Complete login as standard_user.",
+          "expected_result": "Inventory page loads."
+        },
+        {
+          "step": 2,
+          "action": "Locate and read the page heading.",
+          "expected_result": "Heading reads exactly 'Products'."
+        }
+      ]
+    },
+    {
+      "id": "TC-004",
+      "title": "Product Detail Page Navigation - Sauce Labs Backpack",
+      "objective": "Verify that clicking the Sauce Labs Backpack product link opens its detail page with the correct product name.",
+      "priority": "Medium",
+      "type": "Functional",
+      "preconditions": [
+        "User is logged in",
+        "Inventory page displayed"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Locate 'Sauce Labs Backpack'.",
+          "expected_result": "Product card is visible."
+        },
+        {
+          "step": 2,
+          "action": "Click the product title link.",
+          "expected_result": "Product detail page opens."
+        },
+        {
+          "step": 3,
+          "action": "Read the product name.",
+          "expected_result": "Product name reads 'Sauce Labs Backpack'."
+        }
+      ]
+    },
+    {
+      "id": "TC-005",
+      "title": "Add to Cart - Sauce Labs Backpack",
+      "objective": "Verify that clicking 'Add to cart' increments the cart badge to 1.",
+      "priority": "High",
+      "type": "Functional",
+      "preconditions": [
+        "User is logged in",
+        "Backpack detail page open",
+        "Cart is empty"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Click the 'Add to cart' button.",
+          "expected_result": "Item added; button changes to 'Remove'."
+        },
+        {
+          "step": 2,
+          "action": "Observe the shopping cart badge.",
+          "expected_result": "Badge value shows '1'."
+        }
+      ]
+    }
+  ]
+}
