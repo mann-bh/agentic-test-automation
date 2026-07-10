@@ -16,7 +16,3 @@ def get_test_case(test_case_id):
             return tc
 
     return None
-
-if __name__ == "__main__":
-    tc = get_test_case("TC-001")
-    print(json.dumps(tc, indent=4))

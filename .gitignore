@@ -1,1 +1,7 @@
-venv
+test.py 
+tool_test.py
+venv/
+__pycache__/
+execution_logs/
+generated_scripts/
+.env
