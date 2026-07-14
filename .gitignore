@@ -1,7 +1,25 @@
-test.py 
-tool_test.py
+# Virtual Environment
 venv/
-__pycache__/
-execution_logs/
-generated_scripts/
+
+# Environment Variables
 .env
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Generated Files
+generated_scripts/
+execution_logs/
+
+# Test Files
+test.py
+tool_test.py
+
+# IDE Files
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db

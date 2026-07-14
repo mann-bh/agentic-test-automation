@@ -1,8 +1,8 @@
-json
 fastapi 
 uvicorn
-pydantic-ai
 google-genai 
 python-dotenv
 pydantic-ai[google]
 playwright
+streamlit 
+requests
